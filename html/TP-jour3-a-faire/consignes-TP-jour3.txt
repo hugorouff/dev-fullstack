@@ -1,0 +1,262 @@
+=====================================================================
+ TP JOUR 3 - TOURNEMONDE (agence de voyages)
+ Fiche de synthèse : consignes, typographies, couleurs, icônes, textes
+=====================================================================
+
+Fichiers fournis dans le dossier :
+  - maquette.jpg (version ordinateur à reproduire)
+  - assets/ (11 photos Pexels)
+
+
+---------------------------------------------------------------------
+ 1. CE QU'IL FAUT FAIRE
+---------------------------------------------------------------------
+  * Refaire cette maquette en version ordinateur ET mobile
+  * Droit d'utiliser internet, les amis, etc.
+  * Utiliser Tailwind CSS
+  * Respecter les règles de performance (rapidité d'exécution,
+    compression des images, etc.)
+  * Respecter les règles d'accessibilité
+
+
+
+---------------------------------------------------------------------
+ 2. TYPOGRAPHIES (Google Fonts)
+---------------------------------------------------------------------
+  Playfair Display   graisses 500, 600, 700
+                     -> titres (h1, h2, h3), logo, chiffres clés
+  Inter              graisses 400, 500, 600
+                     -> texte courant, navigation, boutons, formulaire
+  Great Vibes        graisse 400
+                     -> accroche manuscrite dorée "selon vos rêves"
+
+  Lien Google Fonts :
+  https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap
+
+
+---------------------------------------------------------------------
+ 3. COULEURS
+---------------------------------------------------------------------
+  Vert très foncé (fond header scrolled, footer)   #0B221F
+  Vert foncé (sections sombres, boutons sombres)   #10302C
+  Vert moyen (dégradés, survol)                    #17403A
+  Or (boutons, accents, icônes, accroche)          #C9A36B
+  Or survol bouton                                 #D6B27C
+  Or foncé (coches, signes + de la FAQ)            #B08A52
+  Crème (fond de page)                             #F7F5F1
+  Blanc (cartes, section étapes, formulaire)       #FFFFFF
+  Encre (texte principal)                          #14211F
+  Gris texte secondaire                            #5D6967
+  Bordures                                         #E4E0D8
+  Fond des champs de formulaire                    #FBFAF8
+
+  Voile sur les photos : dégradé du vert très foncé (#081C1A) vers
+  transparent (hero, bloc formulaire) et vers #051210 sur les cartes
+  destinations.
+
+  Dimensions indicatives : contenu centré, largeur max 1200 px,
+  rayons d'angle 12 à 22 px, boutons en forme de pilule.
+
+
+---------------------------------------------------------------------
+ 4. ICÔNES (Font Awesome 6 - version gratuite)
+---------------------------------------------------------------------
+  CDN : https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+  (alternatives possibles : Lucide, Heroicons, Bootstrap Icons...)
+
+  Header / logo ........ fa-earth-europe, fa-phone
+  Hero ................. fa-arrow-right, fa-play, fa-globe
+  Destinations ......... fa-arrow-left, fa-arrow-right (flèches du
+                         carrousel), fa-location-dot
+  Avantages ............ fa-earth-americas, fa-award,
+                         fa-heart (style regular), fa-shield-halved
+                         + avion en filigrane : fa-plane
+  Voyages idéal ........ fa-circle-check (style regular), fa-arrow-right
+  Comment ça marche .... fa-comments (regular), fa-map-location-dot,
+                         fa-calendar-check (regular), fa-plane-departure
+  Avis ................. fa-star, fa-star-half-stroke
+  FAQ .................. fa-plus (pivote en croix à l'ouverture)
+  Bloc formulaire ...... fa-comment-dots (regular), fa-clock (regular),
+                         fa-gem (regular), fa-chevron-down
+  Footer ............... fa-paper-plane, fa-phone, fa-envelope (regular),
+                         fa-location-dot, fa-instagram, fa-facebook-f,
+                         fa-youtube, fa-pinterest-p (style brands)
+
+
+---------------------------------------------------------------------
+ 5. IMAGES (dossier assets/) ET TEXTES ALTERNATIFS
+---------------------------------------------------------------------
+  pexels-tatianasyrikova-3932885.jpg ......... fond du hero
+        alt : (décorative, fond CSS) ou "Voyageuse photographiant un lac"
+  pexels-asadphoto-12720682.jpg .............. carte Maldives
+        alt : "Balançoire suspendue à un palmier face au lagon des Maldives"
+  pexels-tkirkgoz-17867443.jpg ............... carte Turquie
+        alt : "Montgolfières au-dessus des cheminées de fées de Cappadoce"
+  pexels-pixabay-275538.jpg .................. carte Suisse
+        alt : "Barque amarrée face aux montagnes suisses"
+  pexels-joe-chen-782818851-31028690.jpg ..... carte Japon
+        alt : "Pagode du temple Kiyomizu-dera à Kyoto"
+  pexels-cagdas-birsen-214376922-15834105.jpg  collage, grande image
+        alt : "Couple assis sur une colline, montgolfières dans le ciel"
+  pexels-venish-pomal-58496223-18508580.jpg .. collage, haut
+        alt : "Randonneur au sommet d'une montagne"
+  pexels-asadphoto-28843967.jpg .............. collage, bas
+        alt : "Villa sur pilotis dans un lagon turquoise"
+  pexels-hoang-anh-1415346303-26762942.jpg ... collage, image haute à droite
+        alt : "Femme en robe blanche et chapeau parmi des fleurs"
+  pexels-asadphoto-29376095.jpg .............. fond de la bande de chiffres
+        (décorative, voile vert foncé par-dessus)
+  pexels-hakantahmaz-19973006.jpg ............ fond du bloc formulaire
+        (décorative, voile vert foncé par-dessus)
+
+
+---------------------------------------------------------------------
+ 6. TEXTES DE LA PAGE
+---------------------------------------------------------------------
+
+[HEADER]
+  Logo : Tournemonde - agence de voyages
+  Navigation : Destinations | Avantages | Voyages | Avis | Contact
+  Téléphone : 01 80 00 00 00
+  Horaires : Tous les jours, 9h - 20h
+  Bouton : Choisir un voyage
+
+[HERO]
+  Titre : Faites tourner le monde
+  Accroche manuscrite : selon vos rêves
+  Sous-titre : Des voyages d'auteur aux quatre coins du globe
+  Bouton : Composer mon voyage
+  Lien vidéo : Découvrir notre histoire - en vidéo (1:15)
+  Badge : Plus de 10 ans à vous faire découvrir le monde
+
+[DESTINATIONS POPULAIRES]
+  Sur-titre : Destinations populaires
+  Titre : Où avez-vous envie de partir ?
+  Cartes :
+    Maldives - à partir de 2 190 €
+    Turquie  - à partir de 890 €
+    Suisse   - à partir de 1 450 €
+    Japon    - à partir de 2 090 €
+
+[NOS AVANTAGES]
+  Sur-titre : Nos avantages
+  Titre : Voyagez en toute confiance
+  1. Un large choix
+     Des séjours dans plus de 100 pays, pour tous les goûts et tous
+     les budgets.
+  2. Les meilleurs prix
+     Nous travaillons en direct avec les voyagistes et les hébergeurs
+     locaux.
+  3. Assistance 24h/24
+     Un conseiller à vos côtés à chaque étape de votre voyage.
+  4. Fiabilité
+     Garantie qualité et sécurité, agence immatriculée Atout France.
+
+[VOTRE VOYAGE IDÉAL]
+  Sur-titre : Des voyages pour chaque occasion
+  Titre : Votre voyage idéal
+  Liste : Séjours balnéaires / Circuits et excursions /
+          Aventure et activités sportives / Voyages romantiques /
+          Vacances en famille
+  Bouton : Voir tous les voyages
+
+[COMMENT ÇA MARCHE ?]
+  Sur-titre : Simple comme bonjour
+  Titre : Comment ça marche ?
+  01 Vous nous parlez de vos envies
+     Destination, budget, rythme : un conseiller vous écoute et cerne
+     le voyage qui vous ressemble.
+  02 Nous imaginons votre itinéraire
+     Sous 48 h, vous recevez une proposition détaillée, ajustable à
+     volonté.
+  03 Vous réservez sereinement
+     Paiement en plusieurs fois, annulation flexible et documents de
+     voyage 100 % numériques.
+  04 Vous partez, on veille sur vous
+     Assistance 24h/24 sur place, pour profiter pleinement de chaque
+     instant.
+
+[CHIFFRES]
+  10+ ......... années d'expérience
+  100+ ........ pays proposés
+  25 000 ...... voyageurs conquis
+  4,9/5 ....... note moyenne des avis
+
+[AVIS]
+  Sur-titre : Ils sont partis avec nous
+  Titre : Ce que disent nos voyageurs
+  - 5 étoiles
+    « Une lune de miel aux Maldives organisée dans les moindres
+    détails. Notre conseillère a pensé à tout, même à la surprise du
+    dîner sur la plage. »
+    Camille & Louis - Maldives · mars 2026   (initiales : CL)
+  - 5 étoiles
+    « Le circuit au Japon était parfaitement rythmé : temples,
+    gastronomie, nature. Avec deux enfants, l'assistance en français
+    a fait toute la différence. »
+    Marion D. - Japon · avril 2026   (initiales : MD)
+  - 4,5 étoiles
+    « Le vol en montgolfière au lever du soleil en Cappadoce restera
+    mon plus beau souvenir. Rapport qualité-prix imbattable, je
+    recommande. »
+    Thomas B. - Turquie · septembre 2026   (initiales : TB)
+
+[FAQ]
+  Sur-titre : Questions fréquentes
+  Titre : Vous hésitez encore ?
+  Texte : Voici les réponses aux questions que l'on nous pose le plus
+          souvent. Une autre question ? Notre équipe vous répond en
+          moins d'une heure.
+  Q1 Puis-je modifier mon voyage après la réservation ?
+     Oui. La plupart de nos séjours sont modifiables jusqu'à 30 jours
+     avant le départ, sans frais supplémentaires hors différence
+     tarifaire.
+  Q2 Comment fonctionne le paiement en plusieurs fois ?
+     Vous versez un acompte de 30 % à la réservation, puis le solde en
+     2 ou 3 mensualités, sans frais, jusqu'à 45 jours avant le départ.
+  Q3 Que se passe-t-il en cas d'imprévu pendant le séjour ?
+     Notre équipe d'assistance est joignable 24h/24 et 7j/7. Nous
+     gérons les reports de vol, les changements d'hôtel et les urgences
+     à votre place.
+  Q4 Les voyages sont-ils adaptés aux familles ?
+     Absolument : activités adaptées aux enfants, chambres familiales
+     et transferts privés font partie de nos formules « Vacances en
+     famille ».
+  (Q1 ouverte par défaut, les autres fermées)
+
+[BLOC FORMULAIRE]
+  Sur-titre : Prêt pour de nouvelles découvertes ?
+  Titre : Faites tourner le monde avec nous !
+  Texte : Laissez-nous vos coordonnées et nous composerons le voyage
+          qui deviendra votre plus beau souvenir.
+  Avantages : Consultation gratuite / Voyage sélectionné en 15 minutes /
+              Offres exclusives rien que pour vous
+  Formulaire :
+    Titre : Composez votre voyage de rêve
+    Champs : Votre nom | +33 6 00 00 00 00 |
+             liste "Où avez-vous envie de partir ?"
+             (Maldives, Turquie, Suisse, Japon, Autre destination)
+    Bouton : Composer mon voyage
+    Case à cocher : J'accepte le traitement de mes données personnelles
+    Message de succès : Merci ! Un conseiller vous rappelle très vite.
+    Message d'erreur : Merci de remplir tous les champs et d'accepter
+                       le traitement des données.
+
+[FOOTER]
+  Logo : Tournemonde - agence de voyages
+  Texte : Nous créons des voyages qui inspirent et changent la vie.
+  Newsletter : Recevez nos idées d'évasion - champ "Votre e-mail"
+  MENU : Destinations / Voyages / À propos / Avis / Contact
+  INFORMATIONS : FAQ / Comment ça marche / Conditions de vente /
+                 Mentions légales / Confidentialité
+  CONTACT : 01 80 00 00 00 / contact@tournemonde.fr /
+            12 rue du Voyage, 75002 Paris
+  SUIVEZ-NOUS : Instagram, Facebook, YouTube, Pinterest
+  Bas de page : © 2026 Tournemonde. Tous droits réservés.
+                Photos : Pexels · Icônes : Font Awesome
+
+[META]
+  Titre de l'onglet : Tournemonde - Voyages sur mesure partout dans le monde
+  Description : Tournemonde, agence de voyages : des séjours d'auteur
+  sur mesure aux quatre coins du monde. Plage, aventure, culture,
+  romantisme ou famille.

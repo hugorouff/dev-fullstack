@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournemonde - Voyages sur mesure partout dans le monde</title>
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="./js/script.js" defer></script>
+</head>
+<body class="bg-tourne-cream text-tourne-ink font-sans antialiased">
+    <header class="sticky top-0 z-50 bg-tourne-veryDark text-white border-b border-white/10 backdrop-blur-md bg-opacity-95" role="banner">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3" aria-label="Tournemonde, retour à l'accueil">
+                <div class="w-10 h-10 rounded-full bg-tourne-gold/20 flex items-center justify-center text-tourne-gold text-lg" aria-hidden="true">
+                    <i class="fa-solid fa-earth-europe"></i>
+                </div>
+            </a>
+            <div>
+              <span class="font-serif text-xl font-bold tracking-wide">Tournemonde</span>
+              <span class="block text-xs tracking-widest uppercase text-tourne-gold">agence de voyages</span>
+            </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium" aria-label="Navigation principale">
+            <a href="destinations.html" class="hover:text-tourne-gold transition">Destinations</a>
+            <a href="#avantages" class="hover:text-tourne-gold transition">Avantages</a>
+            <a href="#voyages" class="hover:text-tourne-gold transition">Voyages</a>
+            <a href="#avis" class="hover:text-tourne-gold transition">Avis</a>
+            <a href="#contact" class="hover:text-tourne-gold transition">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-6">
+            <div class="text-right text-xs">
+                <p class="font-semibold text-sm flex items-center gap-2 justify-end text-tourne-gold">
+                    <i class="fa-solid fa-phone text-xs" aria-hidden="true"></i>
+                    <a href="tel:0180000000" aria-label="Téléphoner au 01 80 00 00 00">01 80 00 00 00</a>
+                </p>
+                <p class="text-gray-300">Tous les jours, 9h - 20h</p>
+            </div>
+                <a href="#formulaire" class="bg-tourne-gold hover:bg-tourne-goldHover text-tourne-veryDark font-semibold px-6 py-3 rounded-full text-sm transition shadow-sm">
+                Choisir un voyage
+                </a>
+            </div>
+            <button id="menu-btn" class="lg:hidden text-white text-2xl focus:outline-none focus:ring-2 focus:ring-tourne-gold rounded-lg p-1" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="sr-only">Menu</span>
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-tourne-dark border-t border-white/10 px-6 py-6 space-y-4">
+        <nav class="flex flex-col space-y-3 text-sm font-medium" aria-label="Navigation mobile">
+            <a href="destinations.html" class="mobile-link hover:text-tourne-gold transition py-1">Destinations</a>
+            <a href="#avantages" class="mobile-link hover:text-tourne-gold transition py-1">Avantages</a>
+            <a href="#voyages" class="mobile-link hover:text-tourne-gold transition py-1">Voyages</a>
+            <a href="#avis" class="mobile-link hover:text-tourne-gold transition py-1">Avis</a>
+            <a href="#contact" class="mobile-link hover:text-tourne-gold transition py-1">Contact</a>
+        </nav>
+        <div class="pt-4 border-t border-white/10 flex flex-col space-y-3">
+            <div class="text-xs">
+            <p class="font-semibold text-sm text-tourne-gold flex items-center gap-2">
+                <i class="fa-solid fa-phone text-xs" aria-hidden="true"></i>
+                <a href="tel:0180000000" aria-label="Téléphoner au 01 80 00 00 00">01 80 00 00 00</a>
+            </p>
+            <p class="text-gray-300">Tous les jours, 9h - 20h</p>
+            </div> 
+            <a href="#formulaire" class="mobile-link bg-tourne-gold text-tourne-veryDark font-semibold text-center px-6 py-3 rounded-full text-sm transition">
+            Choisir un voyage
+            </a>
+        </div>
+        </div>
+    </header>
+    <main>
+        <section id="destinations" class="py-24 max-w-7xl mx-auto px-6" aria-labelledby="title-destinations">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <span class="text-xs uppercase tracking-widest text-tourne-goldDark font-semibold">Destinations populaires</span>
+                <h2 id="title-destinations" class="font-serif text-3xl md:text-4xl font-bold text-tourne-ink mt-2">Où avez-vous envie de partir ?</h2>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="assets/pexels-asadphoto-12720682.avif" alt="Plage paradisiaque aux Maldives avec eau turquoise" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Maldives</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 2 190 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="assets/pexels-tkirkgoz-17867443.avif" alt="Montgolfières survolant les paysages de Cappadoce en Turquie" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Turquie</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 890 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="assets/pexels-pixabay-275538.avif" alt="Paysage de montagnes enneigées et lac en Suisse" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Suisse</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 450 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="assets/pexels-joe-chen-782818851-31028690.avif" alt="Temple traditionnel japonais entouré de verdure" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Japon</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 2 090 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80" alt="Thaïlande" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Thaïlande</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 190 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Costa Rica" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Costa Rica</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 650 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?auto=format&fit=crop&w=800&q=80" alt="Islande" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Islande</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 320 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Italie" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Italie</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 750 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1512813070416-2491a2fc32e8?auto=format&fit=crop&w=800&q=80" alt="Mexique" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Mexique</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 290 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=800&q=80" alt="Égypte" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Égypte</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 950 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80" alt="Grèce" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Grèce</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 690 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1503614472348-2fd6f9a955c9?auto=format&fit=crop&w=800&q=80" alt="Canada" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Canada</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 490 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="États-Unis" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">États-Unis</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 590 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80" alt="Australie" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Australie</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 2 490 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Émirats arabes unis" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Dubaï</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 990 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80" alt="Maroc" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Maroc</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 590 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80" alt="Norvège" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Norvège</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 250 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Vietnam" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Vietnam</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 150 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=800&q=80" alt="Royaume-Uni" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Royaume-Uni</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 620 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="France" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">France</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 350 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="Espagne" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Espagne</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 490 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=800&q=80" alt="Portugal" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Portugal</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 520 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="Croatie" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Croatie</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 780 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80" alt="Afrique du Sud" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Afrique du Sud</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 890 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80" alt="Inde" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Inde</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 090 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=800&q=80" alt="Chine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Chine</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 550 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Indonésie" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Indonésie</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 350 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=800&q=80" alt="Brésil" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Brésil</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 690 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80" alt="Argentine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Argentine</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 990 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Pérou" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Pérou</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 750 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=800&q=80" alt="Pays-Bas" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Pays-Bas</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 450 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Autriche" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Autriche</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 680 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1512558470891-5839ff18a706?auto=format&fit=crop&w=800&q=80" alt="République tchèque" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">République tchèque</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 550 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?auto=format&fit=crop&w=800&q=80" alt="Hongrie" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Hongrie</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 480 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=80" alt="Suède" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Suède</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 790 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1509356843153-3f1d216fe1e7?auto=format&fit=crop&w=800&q=80" alt="Finlande" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Finlande</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 850 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=800&q=80" alt="Irlande" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Irlande</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 590 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Malaisie" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Malaisie</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 250 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=800&q=80" alt="Singapour" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Singapour</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 390 €</p>
+                </div>
+            </article>
+            <article class="group relative rounded-3xl overflow-hidden h-96 shadow-md cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" alt="Corée du Sud" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051210] via-black/20 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-serif text-2xl font-bold">Corée du Sud</h3>
+                    <p class="text-xs text-gray-300 mt-1">à partir de 1 690 €</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    </main>
+    <footer id="contact" class="bg-tourne-veryDark text-white pt-20 pb-8 border-t border-white/10" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="space-y-4">
+                <a href="#" class="flex items-center gap-3" aria-label="Tournemonde, retour à l'accueil">
+                <div class="w-10 h-10 rounded-full bg-tourne-gold/20 flex items-center justify-center text-tourne-gold text-lg" aria-hidden="true">
+                    <i class="fa-solid fa-earth-europe"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-xl font-bold tracking-wide">Tournemonde</span>
+                    <span class="block text-xs tracking-widest uppercase text-tourne-gold">agence de voyages</span>
+                </div>
+                </a>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">
+                Nous créons des voyages qui inspirent et changent la vie.
+                </p>
+                <div class="pt-2 space-y-2">
+                <label for="newsletter-email" class="text-xs font-semibold block">Recevez nos idées d'évasion</label>
+                <div class="flex">
+                    <input type="email" id="newsletter-email" name="email" placeholder="Votre e-mail" class="bg-white/10 border border-white/20 text-xs text-white px-3 py-2.5 rounded-l-xl focus:outline-none w-full">
+                    <button class="bg-tourne-gold text-tourne-veryDark px-4 rounded-r-xl hover:bg-tourne-goldHover transition" aria-label="S'abonner à la newsletter">
+                    <i class="fa-solid fa-paper-plane text-xs" aria-hidden="true"></i>
+                    </button>
+                </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-sm font-semibold mb-4 text-tourne-gold">Menu</h4>
+                <ul class="space-y-2.5 text-xs text-gray-400">
+                <li><a href="#destinations" class="hover:text-white transition">Destinations</a></li>
+                <li><a href="#voyages" class="hover:text-white transition">Voyages</a></li>
+                <li><a href="#avantages" class="hover:text-white transition">À propos</a></li>
+                <li><a href="#avis" class="hover:text-white transition">Avis</a></li>
+                <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-sm font-semibold mb-4 text-tourne-gold">Informations</h4>
+                <ul class="space-y-2.5 text-xs text-gray-400">
+                <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                <li><a href="#fonctionnement" class="hover:text-white transition">Comment ça marche</a></li>
+                <li><a href="#" class="hover:text-white transition">Conditions de vente</a></li>
+                <li><a href="#" class="hover:text-white transition">Mentions légales</a></li>
+                <li><a href="#" class="hover:text-white transition">Confidentialité</a></li>
+                </ul>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-sm font-semibold mb-4 text-tourne-gold">Contact</h4>
+                <ul class="space-y-3 text-xs text-gray-400">
+                <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-tourne-gold" aria-hidden="true"></i>
+                    <a href="tel:0180000000" aria-label="Téléphoner au 01 80 00 00 00">01 80 00 00 00</a>
+                </li>
+                <li class="flex items-center gap-2">
+                    <i class="fa-regular fa-envelope text-tourne-gold" aria-hidden="true"></i>
+                    <a href="mailto:contact@tournemonde.fr" aria-label="Envoyer un e-mail à contact@tournemonde.fr">contact@tournemonde.fr</a>
+                </li>
+                <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-location-dot text-tourne-gold mt-0.5" aria-hidden="true"></i>
+                    <span>12 rue du Voyage, 75002 Paris</span>
+                </li>
+                </ul>
+                <div class="flex gap-4 pt-2 text-gray-400 text-sm">
+                    <a href="#" class="hover:text-tourne-gold transition" aria-label="Suivez-nous sur Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="hover:text-tourne-gold transition" aria-label="Suivez-nous sur Facebook">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="hover:text-tourne-gold transition" aria-label="Suivez-nous sur YouTube">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="hover:text-tourne-gold transition" aria-label="Suivez-nous sur Pinterest">
+                        <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 gap-4">
+            <p>© 2026 Tournemonde. Tous droits réservés.</p>
+            <p>Photos : Pexels · Icônes : Font Awesome</p>
+        </div>
+  </footer>
+</body>

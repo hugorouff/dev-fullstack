@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tourne-veryDark: #0B221F;
+  --color-tourne-dark: #10302C;
+  --color-tourne-medium: #17403A;
+  --color-tourne-gold: #C9A36B;
+  --color-tourne-goldHover: #D6B27C;
+  --color-tourne-goldDark: #B08A52;
+  --color-tourne-cream: #F7F5F1;
+  --color-tourne-ink: #14211F;
+  --color-tourne-grayText: #5D6967;
+  --color-tourne-border: #E4E0D8;
+  --color-tourne-inputBg: #FBFAF8;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-script: "Great Vibes", cursive;
+}

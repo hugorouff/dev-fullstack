@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flowly — Travaillez plus intelligemment, pas plus dur</title>
+  <meta name="description" content="Flowly : l'application de productivité tout-en-un pour organiser vos tâches, suivre votre progression et vous concentrer sur l'essentiel.">
+  <script>document.documentElement.classList.add('js')</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital@1&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container headerinner">
+      <a href="#accueil" class="logo">Flowly</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+        <span class="burgerline"></span>
+        <span class="burgerline"></span>
+        <span class="burgerline"></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <ul class="navlist">
+          <li><a class="navlink" href="#accueil" aria-current="page">Accueil</a></li>
+          <li><a class="navlink" href="#fonctionnalites">Fonctionnalités</a></li>
+          <li><a class="navlink" href="#tarifs">Tarifs</a></li>
+          <li><a class="navlink" href="#blog">Blog</a></li>
+        </ul>
+      </nav>
+      <a href="#essai" class="btn btn--outline headercta">Essayer gratuitement <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+
+  <main id="accueil">
+
+    <section class="hero">
+      <div class="container herocontent">
+        <p class="eyebrow">Votre journée, en parfaite harmonie.</p>
+        <h1 class="herotitle">Travaillez plus intelligemment, pas plus dur</h1>
+        <p class="herolead">Prenez le contrôle de votre temps avec notre application de productivité tout-en-un. Organisez vos tâches, suivez votre progression et concentrez-vous sur l'essentiel — sans vous épuiser.</p>
+        <a href="#essai" id="essai" class="btn btn--dark btn--lg">Essayer gratuitement <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="herovisual">
+        <img src="assets/img/organisateur-taches.webp" alt="Une main tenant un smartphone affichant l'application Flowly">
+      </div>
+    </section>
+
+    <section class="section intro" data-reveal>
+      <div class="container">
+        <div class="section-head">
+          <h2>Conçu pour vous faire faire plus <span class="accent-serif">avec moins de stress</span></h2>
+          <p class="text-muted introtext">Notre application de productivité est pensée pour les professionnels modernes qui veulent rester organisés, concentrés et sereins au quotidien.</p>
+        </div>
+        <ul class="features-3">
+          <li><h3>Gestion intelligente des tâches</h3><p class="text-muted">Créez, classez et priorisez vos tâches grâce à une interface glisser-déposer qui s'adapte à votre façon de travailler.</p></li>
+          <li><h3>Calendrier et échéances intégrés</h3><p class="text-muted">Gardez une longueur d'avance grâce à un calendrier synchronisé sur tous vos appareils, avec des rappels avant chaque échéance.</p></li>
+          <li><h3>Mode concentration</h3><p class="text-muted">Éliminez les distractions grâce à des outils de blocage du temps simples et efficaces, pour retrouver votre focus rapidement.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta">
+      <img class="ctabg" src="assets/img/reprendre-le-controle.jpg" alt="">
+      <div class="container">
+        <div class="ctacontent">
+          <div class="ctainner">
+            <p class="eyebrow">Sans stress. Juste le flow.</p>
+            <h2 class="ctatitle">Prêt à reprendre le contrôle de votre temps ?</h2>
+            <p>Commencez dès aujourd'hui à organiser, prioriser et atteindre vos objectifs.</p>
+            <a href="#essai" class="btn btn--light btn--lg">Essayer gratuitement <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section partners" data-reveal>
+      <div class="container">
+        <div class="section-head">
+          <h2>Ils nous font confiance</h2>
+          <p class="text-muted partnersintro">Rejoignez plus de 1 000 entreprises qui construisent déjà leur activité avec Flowly.</p>
+        </div>
+        <ul class="logos">
+          <li><span class="icon" aria-hidden="true">◐</span>NovaTech</li>
+          <li><span class="icon" aria-hidden="true">○</span>Kaïros</li>
+          <li><span class="icon" aria-hidden="true">◆</span>Studio Nord</li>
+          <li><span class="icon" aria-hidden="true">◑</span>ClairFlow</li>
+          <li><span class="icon" aria-hidden="true">▲</span>Atelier B.</li>
+          <li><span class="icon" aria-hidden="true">●</span>Lumen</li>
+          <li><span class="icon" aria-hidden="true">◒</span>Solstice</li>
+          <li><span class="icon" aria-hidden="true">◈</span>Voltaire Digital</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section features" id="fonctionnalites">
+      <div class="container">
+        <div class="featureshead" data-reveal>
+          <p class="eyebrow">Faites fonctionner le temps pour vous</p>
+          <h2>Planifiez mieux. Concentrez-vous mieux. Faites-en plus.</h2>
+          <p class="text-muted">Notre application de gestion du temps vous aide à organiser vos tâches, limiter les distractions et garder le contrôle de votre journée — pour accomplir plus, avec moins de stress.</p>
+        </div>
+        <div class="chose">
+          <article class="card card--gradient card--organizer card--horizontal" data-reveal>
+            <div class="cardtext">
+              <h3>Organisateur de tâches</h3>
+              <p>Triez, priorisez et suivez vos tâches dans un espace de travail clair et intuitif.</p>
+            </div>
+            <img src="assets/img/organisateur-taches.webp" alt="Organisateur de tâches" loading="lazy">
+          </article>
+          <article class="card card--timer" data-reveal>
+            <img src="assets/img/minuteur-de-concentration.jpg" alt="Tableau de bord du minuteur de concentration" loading="lazy">
+            <h3>Minuteur de concentration</h3>
+            <p>Utilisez des outils Pomodoro et de blocage du temps intégrés pour rester concentré et éviter l'épuisement.</p>
+          </article>
+          <article class="card card--planning" data-reveal>
+            <div class="dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <h3>Planification intelligente</h3>
+            <p>Organisez votre journée avec un calendrier glisser-déposer qui s'adapte à votre rythme de travail.</p>
+          </article>
+          <article class="card card--gradient card--reminders card--horizontal" data-reveal>
+            <div class="cardtext">
+              <h3>Rappels personnalisés</h3>
+              <p>Recevez des alertes et des rappels discrets pour ne jamais rien oublier d'important.</p>
+            </div>
+            <img src="assets/img/rappels-personnalises.webp" alt="Rappels personnalisés" loading="lazy">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why">
+      <div class="container whygrid">
+        <div data-reveal>
+          <p class="eyebrow">Pourquoi ça marche</p>
+          <h2 class="whytitle">Conçu pour la concentration, fait pour la vraie vie</h2>
+          <p class="text-muted whytext">Notre application ne se limite pas à gérer votre temps : elle vous aide à faire de la place pour ce qui compte vraiment. Des outils de concentration à la planification flexible, tout est pensé pour vous aider à travailler plus intelligemment, pas plus dur.</p>
+          <ul class="accordion" id="accordion">
+            <li class="accordionitem">
+              <button class="accordionhead" aria-expanded="false"><span class="accordionnum">01</span><span class="accordiotitle">Obtenez plus de résultats en moins de temps</span></button>
+              <div class="accordionpanel"><div><p>Automatisez le superflu et concentrez votre énergie sur les tâches à forte valeur ajoutée.</p></div></div>
+            </li>
+            <li class="accordionitem is-open">
+              <button class="accordionhead" aria-expanded="true"><span class="accordionnum">02</span><span class="accordiontitle">Restez clair et concentré</span></button>
+              <div class="accordionpanel"><div><p>Réduisez les distractions et gérez votre journée avec des outils pensés pour un travail en profondeur.</p></div></div>
+            </li>
+            <li class="accordionitem">
+              <button class="accordionhead" aria-expanded="false"><span class="accordionnum">03</span><span class="accordiontitle">Reprenez le contrôle de votre emploi du temps</span></button>
+              <div class="accordionpanel"><div><p>Visualisez votre semaine d'un coup d'œil et ajustez-la en quelques glissements.</p></div></div>
+            </li>
+          </ul>
+        </div>
+        <figure class="whyimg" data-reveal>
+          <img src="assets/img/concu-pour-la-concentration.jpg" alt="Portrait en noir et blanc d'une personne portant un casque audio" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footers">
+      <div class="footerbrand">
+        <p class="footerlogo">Flowly</p>
+        <p class="eyebrow">Votre journée, en parfaite harmonie.</p>
+        <p class="footerslogan">Travaillez plus intelligemment, pas plus dur</p>
+      </div>
+      <nav aria-label="Menu">
+        <h3 class="footertitle">Menu</h3>
+        <ul class="footerlist">
+          <li><a href="#accueil">Accueil</a></li><li><a href="#fonctionnalites">Fonctionnalités</a></li>
+          <li><a href="#tarifs">Tarifs</a></li><li><a href="#blog">Blog</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Navigation secondaire">
+        <h3 class="footertitle">Navigation</h3>
+        <ul class="footerlist">
+          <li><a href="#">Carrières</a></li><li><a href="#">Presse</a></li>
+          <li><a href="#">Partenaires</a></li><li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Réseaux sociaux">
+        <h3 class="footertitle">Réseaux sociaux</h3>
+        <ul class="footerlist">
+          <li><a href="#">LinkedIn</a></li><li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li><li><a href="#">Facebook</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footeryear"><div class="container">© <span id="year">2026</span> Flowly. Tous droits réservés.</div></div>
+    <div class="footertext" aria-hidden="true">Flowly</div>
+  </footer>
+
+</body>
+</html>
